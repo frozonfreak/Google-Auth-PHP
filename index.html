@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html data-ng-app='appName' lang="en">
+<meta charset="utf-8">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/vendor/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>App</title>
+	</head>
+	<body>
+		  <nav class="navbar" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="home">App Name/Logo</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+              <li ng-class="{ active: isActive('/')}"><a ui-sref="home">Home</a></li>
+              <li ng-class="{ active: isActive('/link')}"><a ui-sref="link">Link</a></li>
+             
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </nav>
+
+        <div ui-view ></div>
+	</body>
+	<script src='//code.jquery.com/jquery-2.1.1.js'></script>
+	<!-- attempt to load AngularJS from CDN -->   
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>          
+
+
+	<!-- if AngularJS fails to load fallback a local version -->  
+	<script>window.angular || document.write('<script src="scripts/vendor/angular.min.js"><\/script>');</script> 
+  	<script src='scripts/vendor/ui-bootstrap-tpls-0.11.0.js'></script>
+  	<script src='scripts/vendor/angular-ui-router.js'></script>
+	<script src='scripts/backbone.js'></script>
+</html>
