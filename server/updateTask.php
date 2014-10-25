@@ -7,8 +7,8 @@
 	include_once 'vendor/GoogleAuthenticator.php';
 
 	$ga = new GoogleAuthenticator();
-	//$secret = $ga->createSecret();
-	$secret = 'RSQFDVEXMWWBIYFP'; //Needs to be hardcoded. 
+	$secret = $ga->createSecret();//Generate once and then hardcode
+	//$secret = 'RSQFDVEXMWWBIYFP'; 
 
 	if(isset($receivedData->{"type"})){
 		$response = '';
